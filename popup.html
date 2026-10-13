@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>WormGuard Pro</title>
+ <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+ <div class="container">
+ <header>
+ <div class="logo">🛡️ WormGuard <span class="badge-pro">PRO</span></div>
+ <button id="settings-btn" class="icon-btn">⚙️</button>
+ </header>
+
+ <div class="main-content">
+ <div class="status-card" id="vpn-card">
+ <div class="icon-large">🌐</div>
+ <h2 id="status-title">Conectando...</h2>
+ <p id="status-subtitle">Verificando API...</p>
+ <button id="vpn-toggle" class="btn-primary">Conectar</button>
+ </div>
+
+ <div class="stats-row">
+ <div class="stat-item">
+ <span class="label">Escaneos</span>
+ <span class="value" id="scan-count">0</span>
+ </div>
+ <div class="stat-item">
+ <span class="label">Estado API</span>
+ <span class="value" id="api-status">--</span>
+ </div>
+ </div>
+
+ <div class="logs-box">
+ <h3>Últimos Escaneos</h3>
+ <ul id="log-list">
+ <li class="empty">Esperando datos...</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+
+ <!-- Modal Configuración -->
+ <div id="settings-modal" class="modal hidden">
+ <div class="modal-content">
+ <span class="close">&times;</span>
+ <h3>⚙️ Configuración del Servidor</h3>
+ <div class="form-group">
+ <label>API URL (Tu dominio)</label>
+ <input type="text" id="input-api-url" placeholder="https://new-h4cker-proxy.site.je/api.php" />
+ </div>
+ <button id="save-config" class="btn-save">Guardar</button>
+ </div>
+ </div>
+
+ <script src="popup.js"></script>
+</body>
+</html>
